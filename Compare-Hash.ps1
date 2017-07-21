@@ -3,7 +3,7 @@ function Compare-Hash {
     .SYNOPSIS
     Compares a provided cryptographic hash against a generated one.
     .DESCRIPTION
-    Used to compare a provided cryptographic hash against one locally generated for the target file. This is useful to ensure the file has not been altered or corrupted from the original.
+    Used to compare a provided cryptographic hash against one locally generated for the target file. This is useful to ensure the file has not been altered or corrupted from the original. Updatesand additional information can be found at either https://github.com/bytesizedalex/compare-hash or on my blog https://www.bytesizedalex.com
     .EXAMPLE
     PS C:\> Compare-Hash -Algorithm MD5 -Hash '0CBC6611F5540BD0809A388DC95A615B' -Path C:\Test.txt
     MATCH
@@ -28,7 +28,7 @@ function Compare-Hash {
     #>
  
  
-    [CmdletBinding(SupportsShouldProcess = $True, ConfirmImpact = 'Low', HelpUri = 'https://www.somewhere.com/')]
+    [CmdletBinding(SupportsShouldProcess = $True, ConfirmImpact = 'Low', HelpUri = 'https://github.com/bytesizedalex/compare-hash')]
     [OutputType([string])]
     [Alias()]
  
