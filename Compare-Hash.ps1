@@ -34,18 +34,18 @@ function Compare-Hash {
  
     Param (
  
-        [Parameter(Mandatory = $true, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Mandatory = $true, ValueFromPipelineByPropertyName = $true, HelpMessage = 'Select a cryptographic hash - e.g MD5, SHA1, SHA256, SHA384 or SHA512')]
         [ValidateNotNull()]
         [ValidateNotNullOrEmpty()]
         [ValidateSet("MD5", "SHA1", "SHA256", "SHA384", "SHA512")]
         [string]$Algorithm,
  
-        [Parameter(Mandatory = $true, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Mandatory = $true, ValueFromPipelineByPropertyName = $true, HelpMessage = 'Enter the provided cryptographic hash to validate against.')]
         [ValidateNotNull()]
         [ValidateNotNullOrEmpty()]
         [string]$Hash,
  
-        [Parameter(Mandatory = $true, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(Mandatory = $true, ValueFromPipelineByPropertyName = $true, HelpMessage = 'Enter the file path.')]
         [ValidateNotNull()]
         [ValidateNotNullOrEmpty()]
         [string]$Path
